@@ -145,7 +145,7 @@ class NamedNativeInteropConfig implements Named {
     }
 
     File getNativeLibsDir() {
-        return new File(project.buildDir, "nativelibs")
+        return new File(project.buildDir, "nativelibs/${target ?: "host"}")
     }
 
     File getGeneratedSrcDir() {
